@@ -435,6 +435,14 @@ body.offcanvas {
   height: 600px;
   margin-bottom: 30px; }
 
+.about-desc a{
+  color: #2c98f0;
+  
+}
+.about-desc a:hover{
+  color: #0000CD;
+}
+
 .about-desc h3 {
   font-size: 18px;
   text-transform: uppercase;
