@@ -306,5 +306,25 @@
 		owlCrouselFeatureSlide();
 	});
 
+	$('nav a').on('click', function () {
+		var $addressValue = $(this).attr("data-nav-section");
+		ga('send', 'event', 'AgendaLink', 'click', $addressValue);
+	});
+
+	$('.colorlib-footer a').on('click', function () {
+		var $addressValue = $(this).attr("href");
+		ga('send', 'event', 'WebsiteLink', 'click', $addressValue);
+	});
+
+	$('section a').on('click', function () {
+		var $addressValue = $(this).attr("href");
+		ga('send', 'event', 'ReadMore', 'click', $addressValue);
+	});
+
+	$('section').waypoint(function() {
+	   var $sectionID = $(this.element).attr('data-section');
+	   ga('send', 'event', 'sectionScroll', 'scroll', $sectionID);
+	},{offset:'25%'});
+
 
 }());
